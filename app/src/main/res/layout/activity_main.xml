@@ -9,34 +9,40 @@
     <EditText
         android:id="@+id/input1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="110dp"
+        android:freezesText="false"
         android:hint="Zadejte první číslo"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:textSize="20sp" />
 
     <Spinner
         android:id="@+id/operationSpinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="71dp"
+        android:spinnerMode="dialog"
+        android:textSize="50sp" />
 
     <EditText
         android:id="@+id/input2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="101dp"
         android:hint="Zadejte druhé číslo"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/calculateButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Vypočítat" />
+        android:text="="
+        android:textSize="34sp" />
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
         android:paddingTop="16dp"
         android:text="Výsledek: "
-        android:textSize="18sp" />
+        android:textSize="30sp" />
 
 </LinearLayout>
