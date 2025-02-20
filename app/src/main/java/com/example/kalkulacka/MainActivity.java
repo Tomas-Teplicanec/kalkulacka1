@@ -32,7 +32,36 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         operationSpinner.setAdapter(adapter);
 
-// Načtení operací ze strings.xml// Načtení operací ze strings.xml
-        // chybí výpočet
+        calculateButton.setOnClickListener(v -> calculate());
     }
+    private void calculate() {
+        String op = operationSpinner.getSelectedItem().toString();
+
+        try {
+            double num1 = Double.parseDouble(input1.getText().toString());
+            double num2 = Double.parseDouble(input2.getText().toString());
+            double output = 0;
+
+            if (op.equals("+")) {
+                output = num1 + num2;
+            } else if (op.equals("-")) {
+                output = num1 - num2;
+            } else if (op.equals("*")) {
+                output = num1 * num2;
+            } else if (op.equals("/")) {
+                if (num2 == 0) {
+                    result.setText("Chyba: dělení nulou");
+                    return;
+                }
+                output = num1 / num2;
+            }
+
+            result.setText("Výsledek: " + output);
+        } catch (Exception e) {
+            result.setText("Chybný vstup");
+        }
+    }
+
+
+
 }

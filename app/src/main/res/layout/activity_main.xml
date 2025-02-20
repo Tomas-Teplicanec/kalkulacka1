@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:hint="Zadejte první číslo"
         android:inputType="numberDecimal" />
-    +
+
     <Spinner
         android:id="@+id/operationSpinner"
         android:layout_width="match_parent"
